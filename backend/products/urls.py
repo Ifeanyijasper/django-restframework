@@ -8,6 +8,7 @@ urlpatterns = [
 #     path('<int:pk>/update/', views.ProductMixinView.as_view()),
 #     path('<int:pk>/delete/', views.ProductMixinView.as_view()),
     path('', views.ProductListCreateAPIView.as_view()),
+    path('search/', views.SearchListView.as_view(), name='search'),
     path('<int:pk>/update/', views.ProductUpdateAPIView.as_view()),
     path('<int:pk>/delete/', views.ProductDestroyAPIView.as_view()),
     path('<int:pk>/', views.ProductDetailAPIView.as_view(), name="product-detail"),
